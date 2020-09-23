@@ -1,0 +1,82 @@
+Verion: 3.0.37
+Date:   28.05.2002
+
+1.	Changed the way a new language was added to the database. Now the program looks through all recordsets in the
+	ProgramingLang.mdb database and add a new record to all recordsets.
+	When finished, the program switch to this new language. User still have to manually change all text strings by
+	him-/herself, either directly in the the database - or using the database/Screen Text option.
+2.	New form is added: frmColor. This form is used to define the colors used in the Code Snippets section.
+3.	Made formating of Code Snippets possible. Now user can use right hand mouse button to select copy/paste,
+	Bold/Italic/Uline, Font/Font Size, and Colors.
+4.	The Italian language is added to the language database; ProgramLang.mdb, thanks to Alessandro Bertini.
+__________________________________________
+
+Version: 3.0.38 / 3.0.39
+Date:   03.06.2002
+
+1.	Changed routine for sending of mail. If Outlook is not running it uses the vbSendMail.dll instead of. This
+	Routine is added to the form "frmEmail".
+2. 	Changed the recordset User: Added 2 new fields: "CompanyContactPerson" and "CompanyMailServerName"
+3.	Changed the recordset frmUser (ProgramLang.mdb): Addet2 new fields: "label1(24)" and "label1(25)"
+4.	Changed the module "Programming.bas"; added function "IsWebConnected" as well as function
+	"InternetGetConnectedState" together with 5 constants.
+	The Function: "getstring" is added to module "Schedules.bas"
+5.	The Class Module "SendMail.cls" and the Module "modMXQuery.bas" is added to the project.
+___________________________________________
+Version: 3.0.39 - 3.0.41
+Date:  	22.07.2002
+
+1.	Changed routine for sending of code snippet with Email. Now it is possible to select if one wish to 
+	send mail to snippet-author, or to send the whole snippet to a mail-address.
+2.	CodeZip:	Changed scroolbar in RichTextBox to just vertical.
+___________________________________________
+Version: 3.0.42
+Date: 	24.07.2002
+
+1.	Added database CodeIco.mdb
+2.	Added new form: frmIcons for storing of Icons in the above mentioned database.
+_____________________________________________
+Version 3.0.43 - 3.0.44
+Date:	29.07.2002
+
+1.	Deleted the send fax procedures
+2.	Split the database Programming.mdb into two databases: CodeMaster & CodeSnippets
+3.	Renamed the database ProgramingLang to CodeLang
+4.	Now the program makes a new User Code Snippet database first time user uses the program. User defines the
+	database name (Default = MyCodeSnippets).
+5.	Added new form: frmCodeStatistic for showing the Code Snippet and zip-file statistics.
+_____________________________________________
+Version 3.0.45
+Date:	07.08.2002
+
+1.	frmColor:	Changed color code (frmColor & dbCodemaster.Color) recordset to include country language
+2.	frmMDI:  	Now the DropDownMenu is also translated to country language, includes now inserting of pictures.
+			Added new menu item: Send Mail.
+3.	frmCustomer:	Added transfer of customer informations to Outlook
+4.	frmEmail:	Added Outlook contact list for user to choose from.
+5.	frmInvoice:	Writes now Invoice via a PrintPreview setup.
+
+______________________________________________
+Version	3.0.46 - 3.0.55
+Date:	24.10.2002
+
+1.	frmProgramming:		Changed to PrintPreView for all print-outs.
+2.	frmWriteProgRep:	Added from-to print dates
+3.	Programming.bas:	Added function IsDateBetween
+4.	frmCustomer:		Changed to PrintPreView for all print-outs
+5.	All forms:		Removed all LaVolpe buttons and replaced with VB standard.
+6.	frmPrintLicence:	Added new form for print of sold licence (all projects or one project)
+7.	frmShowAuthor:		Added new form for showing of authors zip/snippet codes.
+8.	rsCodeSnippet:		Added new field: CodeNo - Autonumber	
+9.	rsAPI & rsAPIType	Added to the database 'CodeSnippets'
+10.	frmAPI:			New form added for show of API commands
+11.	frmAPIType:		New form added for input of API-types.
+12.	CodeSnippet.mdb:	New recordset added: Language
+13.	rsCodeSnippet:		Added new field: CodeLanguage
+14.	frmCodeLanguage		Added new form
+15.	rsCodeZip:		Adden new field: CodeLanguage
+16:	frmCodeSnippets:	Changed to accomodate the new CodeLanguage-field.
+17:	frmCodeZip:		Changed to accomodate the new CodeLanguage-field.	
+18:	rsCodeType:		Added field: CodeLanguage
+19:	frmCodeType:		Changed to accomodate the new CodeLanguage-field.
+20:	All forms:		Added the possibility of changing the form-textures.
